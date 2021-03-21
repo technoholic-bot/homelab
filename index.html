@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!--Title and Meta Tags-->
+        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="noodpt"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <!--Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link href="css/all.css" rel="stylesheet"> <!--fontawesome-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+
+        <div id="page_header"">
+
+                <div id="clock">00:00</div>
+                <div id="date">Monday 10 April</div>   
+
+        </div>
+
+        <div class="container_master">
+
+                <!-- Favorite Applications -->
+                <div class="container">
+
+                        <div class="section_header">
+                                <h2><i class="fas fa-heart"></i> Internet</h2>
+                        </div>
+
+                        <a href="https://www.google.com/" target=_blank>
+                        <div class="item">
+                                <img src="images/glances-mono.svg" />
+                                <div class="subtext">
+                                <h3>Google</h3>
+                                </div>
+                        </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/" target=_blank>
+                        <div class="item">
+                                <img src="images/esphome-mono.svg" />
+                                <div class="subtext">
+                                        <h3>Youtube</h3>
+                                </div>
+                        </div>
+                        </a>
+
+                </div>  
+
+                <div class="container">
+
+                        <div class="section_header">
+                                <h2><i class="fas fa-server"></i> Media</h2>
+                        </div>
+
+                        <a href="http://127.0.0.1:32400/web/index.html#!/media/f08aa39eddff31e4f757f122843626cbd20691b7/com.plexapp.plugins.library?key=%2Flibrary%2Fsections%2F1%2Fall%3Ftype%3D2&pageType=list&context=content.library&source=1" target=_blank>
+                                <div class="item">
+                                        <img src="images/plex-mono.svg" />
+                                        <div class="subtext">
+                                        <h3>Plex Mac</h3>
+                                        </div>
+                                </div>
+                                </a>
+        
+        
+                                <a href="http://192.168.0.101:32400/web/index.html" target=_blank>
+                                        <div class="item">
+                                                <img src="images/plex-mono.svg" />
+                                                <div class="subtext">
+                                                <h3>Plex Pi</h3>
+                                                </div>
+                                        </div>
+                                </a>
+        
+
+                                <a href="http://192.168.0.101:8096/web/index.html#!/serveractivity?useractivity=true" target=_blank>
+                                        <div class="item">
+                                                <img src="images/omv-mono.svg" />
+                                                <div class="subtext">
+                                                        <h3>Emby Activity</h3>
+                                                </div>
+                                        </div>
+                                </a>
+
+                                        <a href="http://192.168.0.101:8096/web/index.html" target=_blank>
+                                <div class="item">
+                                        <img src="images/omv-mono.svg" />
+                                        <div class="subtext">
+                                                <h3>Emby</h3>
+                                        </div>
+                                </div>
+                                </a>
+                </div>                  
+
+
+                <div class="container">
+
+                        <div class="section_header">
+                                <h2><i class="fas fa-server"></i> System</h2>
+                        </div>
+
+                                <a href="http://192.168.0.101:8989/" target=_blank>
+                                <div class="item">
+                                        <img src="images/pymedusa-mono.svg" />
+                                        <div class="subtext">
+                                                <h3>Sonarr</h3>
+                                        </div>
+                                </div>
+                                </a>
+        
+                                <a href="http://192.168.0.101:9091/transmission/web/#confirm" target=_blank>
+                                <div class="item">
+                                        <img src="images/transmission-mono.svg" />
+                                        <div class="subtext">
+                                                <h3>Transmission</h3>
+                                        </div>
+                                </div>
+                                </a>
+
+                                <a href="http://192.168.0.101:8384/" target=_blank>
+                                        <div class="item">
+                                                <img src="images/transmission-mono.svg" />
+                                                <div class="subtext">
+                                                        <h3>Sync Pi</h3>
+                                                </div>
+                                        </div>
+                                </a>         
+                                <a href="http://127.0.0.1:8384/" target=_blank>
+                                        <div class="item">
+                                                <img src="images/transmission-mono.svg" />
+                                                <div class="subtext">
+                                                        <h3>Sync Mac</h3>
+                                                </div>
+                                        </div>
+                                </a>                                                                
+        
+                </div>                
+        </div>
+
+        
+          
+        <script>
+
+                if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += "no-touch";
+}
+
+                // Get current time and format
+                function getTime() {
+                let date = new Date(),
+                        min = date.getMinutes(),
+                        //sec = date.getSeconds(),
+                        hour = date.getHours();
+                return "" +
+                        (hour < 10 ? ("0" + hour) : hour) + ":" +
+                        (min < 10 ? ("0" + min) : min);// + ":" + 
+                //(sec < 10 ? ("0" + sec) : sec);
+                }
+                function getDate() {
+                let date = new Date(),
+                        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                        cmonth = months[date.getMonth()],
+                        days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                        cday = days[date.getDay()],
+                        cnum = date.getDate();
+                return "" + cday + " " + cnum + " " + cmonth;
+                }
+        
+                // Set up the clock and date
+                document.getElementById("clock").innerHTML = getTime();
+                document.getElementById("date").innerHTML = getDate();
+                // Set clock interval to tick clock
+                setInterval(() => {
+                        document.getElementById("clock").innerHTML = getTime();
+                }, 1000);
+                setInterval(() => {
+                        document.getElementById("date").innerHTML = getDate();
+                }, 100000);
+
+                document.body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(./bg/cat.jpg)';
+
+        </script>
+
+</body>
+</html>
